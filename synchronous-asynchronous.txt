@@ -1,0 +1,10 @@
+synchronous means execution will take place one by one.
+
+asynchronous means if some function takes more times than usual then it will execute after other things are executed..
+
+suppose there are three functions fun1,fun2,fun3.
+fun2 is large and is defined inside settimeout then after the given execution time it will run,till then the function first goes to web api...the web api stores the func till execution time is completed then the func is transferred to callback queue..
+
+the event loop keep checking callback queue to find if there is anything which will be transferred to call stack to be executed.
+
+web api------->callback queue--------->event loop-------->call stack

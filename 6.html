@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrays and Objects</title>
+</head>
+<body>
+    <div class="container">simple si html</div>
+    <script>
+        let myVar = 34;
+        let myVar2 = "string";
+        let myVar3 = true;
+        let myVar4 = null;
+        let myVar5 = undefined;
+
+        let employee = {              //objects are used to store diffent values of a single entity
+            name: "Harry",
+            salary: 10,
+            channel: "CodeWithHarry",
+            "channel 2": "ProgrammingWithHarry",
+        };
+        employee.age=12;
+        console.log(employee);
+        //we can also pass object as arguments in func call and in function local variables name,salary,channel are arguments.
+
+        let func=(emp)=>{
+            console.log(emp.name);
+
+        }
+        func(employee);
+
+        const {name,salary,channel}=employee;  //this is another way of printing
+        // console.log(name,salary,channel);
+
+
+        //we can make array of objects also.
+
+
+        // let names = [1000, 222, 4, "Harry", undefined];
+
+        let arr=[[10,20,30],['bus','car','train'],[true,false]];  //array of array
+        console.log(arr[1][2]); 
+
+        let names = new Array(41, 2, 4, "Harry", undefined);  // constructor method
+        // let names = new Array(23);
+        console.log(names.length);
+        // names.sort();            //constructor method working only for sorting
+        names.push("this is pushed");
+        // console.log(names.sort());
+        console.log(names);
+    </script>
+</body>
+</html>

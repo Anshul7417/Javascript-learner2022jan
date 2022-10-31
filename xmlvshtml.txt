@@ -1,0 +1,10 @@
+xml is used to transfer information to servers and recieve servers....synatx is same almost like html
+
+in html we have to use defined tags but in xml we have the xhoice to crete our own custom tags
+
+Ajax ->asynchronous js and xml
+ajax is not a programming language.
+ajax helps in fetching data async .
+no page reload/refresh.
+modern websites uses Json instead of xml for data transfer.
+ajax uses xmlhttprequest object to achieve functionality(also called xhr object).

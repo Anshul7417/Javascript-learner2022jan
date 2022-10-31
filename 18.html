@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // here we have described mapping filtering and reducing
+        const normalarray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        //2,3,4,5...... suppose we have to make it this
+
+        const maparray = normalarray.map((num) => {
+            return num + 1;                                    //this is called mapping because it maps one element of first array to every element of second array
+        });
+
+        const double = []  //another method
+        normalarray.forEach((num) => {
+            double.push(num + 1);
+        });
+
+        console.log(maparray)
+
+
+        const filterarray = normalarray.filter((num) => {       //this is called filtering
+            return num > 2 && num < 10;
+        });
+
+        const reducearray = normalarray.reduce((accumulator, num) => {
+            return accumulator + num;                           //acc=acc+num   // we can also find product of elements also
+        }, 0);                                                  //it means var acc is initialized with zero
+        console.log(reducearray);                              //this is called reducing array into single unit.
+
+
+
+    </script>
+</body>
+
+</html>

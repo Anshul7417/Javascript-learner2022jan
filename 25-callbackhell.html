@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //function that use callback take some time to produce a result.
+
+    //suppose we want to fetch data from an api and we have a query
+    //  after 2s we want student roll no...then after next 2s we want name and age and after that gender.
+
+
+    const getrollno = () => {
+        setTimeout(() => {
+            console.log("api getting roll no");
+            let roll_no = [1, 2, 3, 4, 5, 6];
+            console.log(roll_no);
+
+            setTimeout((rollno) => {
+                const bidata = {
+                    name: "anshul",
+                    age: 20
+                }
+
+                    console.log(`Roll no ${rollno}.Name of this student is ${bidata.name} and age is ${bidata.age}`)
+
+                    setTimeout((name) => {
+                    bidata.gender = "Male";
+                    console.log(`Name of this student is ${name} and age is ${bidata.age}. He is an alpha ${bidata.gender}`)
+                }, 2000, bidate.name);
+
+            }, 2000, roll_no[1]);                     //roll_no[1] is pointing to rollno.
+
+        }, 2000);
+    }
+
+    getrollno();
+</script>
+
+</html>
+
+<!-- set time out also has a third argument which is written after time(lower one) which is further accessed in the settimeout parameter(upper one) -->
+
+<!-- This is called callback hell because it is confusing.so solution is promise. -->

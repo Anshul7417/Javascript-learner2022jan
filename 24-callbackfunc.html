@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // a callback is a function that is to be executed after another function has finished executing......to achieve this...we pass func as argument Any function that is passed as an argument is called a callback function...
+
+    const funa=(person,callback)=>{
+        console.log(`My name is anshul.I am talking to ${person} who is my life`);
+        callback();
+    }
+
+    const funb=()=>{
+        console.log(`hi baby kese ho`);
+    }
+
+    funa("Honey",funb);
+    // funb();
+
+
+
+    
+</script>
+</html>

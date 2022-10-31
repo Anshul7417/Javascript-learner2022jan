@@ -1,0 +1,38 @@
+ecma is a standard maintained by ecma international bcoz many company are using js but wih different names so it becomes hard for developers in 19s.
+
+js is single threaded because it has one call stack.
+
+js is a event driven language.this means that instead of waiting for a response before moving on,javascript will keep executing while listening for other events.
+
+undefined in console means it doesnt return anything.
+
+domain name server converts dn to ip..we purchase dn ex-facebook.com
+
+client is a program that requests;
+
+server is a program that response.
+
+ip is a location where server is located.port is the place where that server app is running means where that system is listeining requests.default is 80.
+
+in http-
+200-everything ok.
+404-error not found
+
+http protocol-set of rules.
+it is used to transfer data over web
+
+get is used to request data.data is sent in url hence not safe.bookmark allow.in url max word limit 2000.get is less secure than post
+
+post is used to send data to a server to create\update a resource.Data is stored in request body.ex-data enterd in a form will go to server through response body(means visible in inspect).bookmark not allow.no limit like get.
+
+put req is smae as post..generally used to update data.put is idempotent calling put multiple times will always produce same result.
+
+
+delete method delete resources.
+
+here we had saw that http is good but is not sequre bcoz in get data(password) is in query string and in post data is in request body.hence hackers acn easily hack.
+
+https(secure) is a secure extension of http.websites that install ssl\tls certificate can use it to establish secure connection to server.
+
+
+

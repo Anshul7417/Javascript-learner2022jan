@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Tutorial</title>
+</head>
+<body>
+    <div class="container">This is my container</div>
+    <script>  //js object notation(json)
+        let jsonObj = {  //json is nothing but a way to transport objects to servers in the form of string
+            "name": "Harry",
+            "channel": "CWH",
+            "friend": "Rohan Das",
+            "food": "Bhindi" //#bhindiLoverSquad
+        } 
+
+        //in json ,value must of some data types but not function,date,undefined
+        //in object key doesnt have comma but in json both have comma key-value.
+        
+        console.log(jsonObj);
+        let myJsonStr = JSON.stringify(jsonObj);
+        console.log(myJsonStr);
+
+        myJsonStr = myJsonStr.replace('Harry', 'Larry');
+        console.log(myJsonStr)
+
+        newJsonObj = JSON.parse(myJsonStr);  // converting string back to json
+        console.log(newJsonObj)
+
+        
+
+
+    </script>
+</body>
+</html>
+
+
+<!-- JSON is a format for storing and transporting data.
+JSON is often used when data is sent from a server to a web page. 
+
+JSON is text, and text can be transported anywhere, and read by any programming language.
+
+*The JSON format is syntactically identical to the code for creating JavaScript objects.
+
+JavaScript Objects can be converted into JSON, and JSON can be converted back into JavaScript Objects.
+
+
+This way we can work with the data as JavaScript objects, with no complicated parsing or translations.
+
+     
+     JSON Methods
+
+Method         Description
+parse()         Parses a JSON string and returns a JavaScript object
+stringify()     Convert a JavaScript object to a JSON string
+
+
+All modern browsers have a built-in XMLHttpRequest object to request data from a server.
+The XMLHttpRequest Object
+The XMLHttpRequest object can be used to request data from a web server. -->

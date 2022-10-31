@@ -1,0 +1,16 @@
+{
+    "employee":[
+        {
+            "name":"anshul",
+            "age":20
+        },
+        {
+            "name":"Ram",
+            "age":22
+        },
+        {
+            "name":"Shyam",
+            "age":25
+        }
+    ]
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    var xhttp=new XMLHttpRequest();  //an object that establish our connection with server
+    xhttp.onreadystatechange=function() {
+        //the onreadystatechange event is triggerd everytime the ready state changes.
+        if(this.readyState ==4 && this.status == 200 ){
+            console.log(xhttp.responseText);  //responsetext is like a key in a xmlhttpreq object whose value is our json file
+            var res=JSON.parse(xhttp.responseText);
+            console.log(res);
+        }
+    }
+
+    xhttp.open("GET","19.json",true);
+    // true means asysnchronous
+    xhttp.send();
+</script>
+</html>
+
+<!-- modern browsers have a built-in XMLHttpRequest object to request data from a server.
+The XMLHttpRequest Object
+The XMLHttpRequest object can be used to request data from a web server.
+
+JSON Tutorial in Hindi. 
+The XMLHttpRequest object is a developers dream because you can:
+
+Update a web page without reloading the page
+Request data from a server - after the page has loaded
+Receive data from a server  - after the page has loaded
+Send data to a server - in the background
+
+The onreadystatechange Event
+The readyState property holds the status of the XMLHttpRequest.
+
+The onreadystatechange event is triggered every time the readyState changes.
+
+During a server request, the readyState changes from 0 to 4:
+
+0: request not initialized 
+1: server connection established
+2: request received 
+3: processing request 
+4: request finished and response is ready
+
+In the onreadystatechange property, specify a function to be executed when the readyState changes: -->

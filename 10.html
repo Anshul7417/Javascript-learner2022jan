@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manipulating DOM</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="main" class="container">
+        <ul id="nav">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>More About Us</li>
+            <li>Contact Us</li>
+        </ul>
+    </div>
+    <div class="container">
+        Another Container
+    </div>
+    <script>
+
+        //dom is something that a browser creates to allow us to modify the html and css.
+        //the dom represents the documents as nodes and objects;that way,programming languages can interact with page
+
+        let main = document.getElementById('main');  //this document provides acces to full webpage.when html loads into a webpage,then it becomes a document object
+        // console.log(main);
+        let nav = document.getElementById('nav');
+        // console.log(nav);
+        
+        // nav.innerHTML="<h1>anshul tripathi</h1>"  // to change elements
+        let containers = document.getElementsByClassName('container');
+        // console.log(containers[1]);  //containers[0]to get one
+
+        // let sel = document.querySelector('#nav>li');  // we can get elements by selectors . for class # for id
+        // console.log("Selector returns ", sel)         //  returns first occurence
+
+        let sel = document.querySelectorAll('#nav>li');  //returns all occurence
+        console.log("Selector returns ", sel)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //a promise is an object that keep track about whether a certain event has happened already or not.It also detrmines what happened already or not.There are generally three stages ina promise.1.pending 2.resolve 3.reject (remember calling example 10 bje phle phone)
+
+    //While writing promise a executor function has to be written which takes two parameter resolve,reject.
+
+
+    // PROMISE MAKING
+
+
+    const obj1 = new Promise((resolve, reject) => {  //constructor init method..exexcutor function
+        setTimeout(() => {
+            let roll_no = [1, 2, 3, 4, 5];
+            resolve(roll_no);          //resolve(value) call on fulfilled.resolve can be accesed through then with roll_no=rollno parameters are same
+            // reject("roll no not found");  //reject can be accesed through catch
+        }, 2000);
+    });
+
+    const getbiodata = (indexdata) => {   //all indexdata are same
+        return new Promise((resolve, reject) => {    //promise as aobject method
+            setTimeout((indexdata) => {
+                let biodata = {
+                    name: 'Anshul',
+                    age: 20
+                }
+                resolve(`My roll no is ${indexdata}.My name is ${biodata.name} and I am ${biodata.age} years old`)
+            }, 2000, indexdata);
+        })
+    }
+
+
+
+
+    //PROMISE CONSUMING 
+
+
+    // obj1.then((rollno) => {
+    //     console.log(rollno);
+    //     getbiodata(rollno[1]).then((str) => {  //here the array name should be rollno instead of roll_no
+    //         console.log(str);
+    //     })
+    // }).catch((error) => {
+    //     console.log(error)
+    // })
+                                                                                                    //------TWO WAYS OF DOING SAME THING.
+
+    obj1.then((rollno) => {
+        console.log(rollno);
+        return getbiodata(rollno[1]);
+    }).then((str) => {  
+        console.log(str);   //it prints resolve line
+    }).catch((error) => {
+        console.log(error)
+    })
+
+</script>
+
+</html>
